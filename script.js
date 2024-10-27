@@ -1,5 +1,6 @@
 "use stict";
 
+const button = document.querySelectorAll('button');
 const cba = document.querySelectorAll(".c");
 const sign = document.querySelectorAll(".sign")
 const equal = document.querySelector(".equal");
@@ -14,6 +15,20 @@ let show = true;
 let nu = [];
 let num = [];
 let num1, num2, operator, result;
+
+//Hover property
+button.forEach(btn => btn.addEventListener("mouseover", function(){
+    btn.style.background = "#789DBC";
+    btn.style.transform = "scale(1.123)";
+}))
+button.forEach(btn => btn.addEventListener("mouseleave", function(){
+    btn.style.background = "white";
+    btn.style.transform = 'scale(1)';
+}))
+
+
+
+
 
 //Convert array into string
 const spli = (numbr => numbr.toString().split(',').join(''));
